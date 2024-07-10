@@ -1,6 +1,6 @@
 export default function Sidebar({ pokemonList, onSelectPokemon }){
     return(
-        <aside className="w-1/3 min-h-min bg-slate-300/50 p-4 rounded-md">
+        <aside className="w-full md:w-1/3 min-h-min bg-slate-300/50 p-4 rounded-md">
             <h2 className="text-yellow-600 text-2xl font-bold">You've found:</h2>
             <ul className="grid grid-cols-3 grid-rows-3 gap-4 mt-4">
                 {
