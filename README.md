@@ -12,6 +12,6 @@ current version – 0.3
 
 ## Versions
 
-0.1 – basic function, using API 
-0.2 – layout, design
-0.3 – error state
+* 0.1 – basic function, using API 
+* 0.2 – layout, design
+* 0.3 – error state
