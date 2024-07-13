@@ -1,8 +1,17 @@
-# React + Vite
+# POKEDEX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Can you catch them all? Simple web app, that let's you test your Pokemon knowledge.
 
-Currently, two official plugins are available:
+## Main goal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You need to type in as many Pokemons as you remember.
+
+## Current state
+
+current version – 0.3
+
+## Versions
+
+0.1 – basic function, using API 
+0.2 – layout, design
+0.3 – error state
