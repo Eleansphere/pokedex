@@ -1,7 +1,9 @@
 import noPokemonImg from '../assets/no-Pokemon.jpg';
-
+import { log } from '../log.js';
 
 export default function NoPokemon(){
+    log('</NoPokemon > rendered');
+  
     return(
         <section className='flex items-center flex-col gap-4 bg-green-900 p-4 rounded-xl w-full sm:w-1/3'>
             <h2 className="text-white font-bold text-xl">Ops... No Pokemon in sight.</h2>
