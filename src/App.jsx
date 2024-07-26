@@ -8,6 +8,20 @@ import Modal from './components/Modal.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Error from './components/Error.jsx';
 
+function handlePokemonLoad(data, setPokemonList) {
+  setPokemonList((prevState) => {
+    const newPokemon = {
+      id: data.id,
+      name: data.name,
+      pokemonData: data,
+    };
+    return {
+      ...prevState,
+      pokemons: [...prevState.pokemons, newPokemon],
+    };
+  });
+}
+
 function App() {
   const [pokemonList, setPokemonList] = useState({
     selectedPokemonId: undefined,
@@ -25,26 +39,12 @@ function App() {
   const dialog = useRef();
   const inputValue = useRef();
 
-  function handlePokemonLoad(data) {
-    setPokemonList((prevState) => {
-      const newPokemon = {
-        id: data.id,
-        name: data.name,
-        pokemonData: data,
-      };
-      return {
-        ...prevState,
-        pokemons: [...prevState.pokemons, newPokemon],
-      };
-    });
-  }
-
   useEffect(() => {
     async function loadPokemon() {
       if (inputValue.current.value.trim() !== '') {
         try {
           const data = await fetchPokemon(inputValue.current.value);
-           handlePokemonLoad(data);
+          handlePokemonLoad(data, setPokemonList);
           inputValue.current.value = '';
           setIsFetching(false);
         } catch (error) {
@@ -109,18 +109,18 @@ function App() {
   }
 
   useEffect(
-    ()=>{
-      function callback(e){
-        if(e.code ==="Enter"){
-          handleSearch();
+    () => {
+      function callback(e) {
+        if (e.code === "Enter") {
+          handleSearch()
         }
       }
       document.addEventListener("keydown", callback);
-      return ()=>{
-      document.removeEventListener("keydown", callback);
-      } 
+      return () => {
+        document.removeEventListener("keydown", callback);
+      }
 
-  },[handleSearch]);
+    }, [handleSearch]);
 
   return (
     <main className="h-screen flex items-center flex-col gap-6 bg-[url(./assets/grassland_bg.jpg)]">
