@@ -101,22 +101,47 @@ export default function PokemonContextProvider({ children }){
       });
       console.log(pokemonList);
     }
-// data selektovaneho pokemona
-
+    // data selektovaneho pokemona
+    
     const selectedPokemonData = pokemonList.pokemons.find(
-        (pokemon) => pokemon.id === pokemonList.selectedPokemonId
+      (pokemon) => pokemon.id === pokemonList.selectedPokemonId
     );
+    
+
+
+    //index selektovaneho pokemona
+    
+    let currentIndex = pokemonList.pokemons.findIndex(index =>
+    index.id === pokemonList.selectedPokemonId);
+
+    //zobrazeni dalsiho pokemona z listu
+    
+    function handleNextPokemon(){
+      if(currentIndex < pokemonList.pokemons.length -1){
+        
+        setPokemonList((prevState) =>{
+           return {
+              ...prevState,
+              selectedPokemonId: pokemonList.pokemons[(currentIndex+1)%pokemonList.pokemons.length].id,
+            };
+          });
+      }
+    }
 
 
 // zobrazeni predchoziho pokemona z listu
 
     function handlePrevPokemon(){
+    
+      if(currentIndex > 0){
+
         setPokemonList((prevState) =>{
-          return {
-            ...prevState,
-            selectedPokemonId: pokemonList.prevState.pokemons[pokemonList.pokemons.length-1].id,
-          };
-        });
+            return {
+              ...prevState,
+              selectedPokemonId: pokemonList.pokemons[(currentIndex+pokemonList.pokemons.length-1)%pokemonList.pokemons.length].id,
+            };
+          });
+      }
     }
 
 // modal closing
@@ -179,12 +204,14 @@ useEffect(() => {
         handleShowSelectedPokemon,
         selectedPokemonData,
         handlePrevPokemon,
+        handleNextPokemon,
         handleClose,
         dataError,
         modalIsOpen,
         isFetching,
         dialog,
         inputValue,
+        currentIndex,
     }
 
 
