@@ -16,3 +16,4 @@ current version – 0.3.6
 * 0.2 – layout, design
 * 0.3 – error state
 * 0.3.6 – pokemon stats, prev and next pokemon btn
+* 0.4 – visual changes, adding pokemon font
