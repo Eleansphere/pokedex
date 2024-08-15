@@ -3,7 +3,15 @@ export default {
   content: ["./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        pokemonSolid: "'PokemonSolid', serif",
+        pokemonHollow: "'PokemonHollow', serif",
+      },
+    },
+    letterSpacing: {
+      widest: '.5rem',
+    }
   },
   plugins: [],
 }

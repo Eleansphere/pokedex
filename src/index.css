@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+ @font-face {
+    font-family: 'PokemonSolid';
+    src: url(../public/fonts/Pokemon-Solid.woff2) format('woff2'), url(../public/fonts/Pokemon-Solid.woff) format('woff');
+ }
+ @font-face {
+    font-family: 'PokemonHollow';
+    src: url(../public/fonts/Pokemon-Hollow.woff2) format('woff2'), url(../public/fonts/Pokemon-Hollow.woff) format('woff');
+ }
+}

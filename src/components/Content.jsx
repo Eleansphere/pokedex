@@ -10,6 +10,9 @@ export default function Content(){
     
     return(
         <>
+        <h1 className="font-pokemonSolid tracking-widest text-5xl text-yellow-400 drop-shadow-[0_8px_2px_rgba(50,0,150,0.50)]">
+        Pokedex
+      </h1>
         {pokemonList.selectedPokemonId === undefined ? (
         <NoPokemon />
       ) : (

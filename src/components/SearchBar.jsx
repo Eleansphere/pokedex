@@ -11,7 +11,7 @@ export default function SearchBar(){
   const {dialog, inputValue, handleClose, handleSearch, isFetching, dataError} = useContext(PokemonContext);
   
   return (
-    <div className="w-full md:w-1/3 bg-green-900 rounded-xl p-4 flex gap-1">
+    <div className="w-full md:w-1/3 bg-green-900 rounded-xl p-3 flex gap-1">
       
       <Modal ref={dialog}>
         {dataError && (
