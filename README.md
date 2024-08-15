@@ -8,10 +8,11 @@ You need to type in as many Pokemons as you remember.
 
 ## Current state
 
-current version – 0.3
+current version – 0.3.6
 
 ## Versions
 
 * 0.1 – basic function, using API 
 * 0.2 – layout, design
 * 0.3 – error state
+* 0.3.6 – pokemon stats, prev and next pokemon btn
