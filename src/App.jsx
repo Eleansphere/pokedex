@@ -10,11 +10,13 @@ function App() {
   
   return (
     <PokemonContextProvider>
-      
+      <main className='h-screen flex items-center flex-col gap-6 bg-[url(assets/grassland_bg.jpg)]'>
+
       <Content />
       <SearchBar />
       <PokemonList />    
     
+      </main>
     </PokemonContextProvider>
   );
 }
