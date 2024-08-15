@@ -11,7 +11,7 @@ export default function Pokemon() {
       <h2 className="col-span-4 self-center  text-yellow-400 text-center capitalize text-2xl font-pokemonSolid tracking-widest">
         {selectedPokemonData.name}
       </h2>
-      <div className="flex items-center col-span-2 row-span-2 bg-[url(./src/assets/pokeball_bg.png)] bg-contain bg-no-repeat bg-center">
+      <div className="flex items-center col-span-2 row-span-2 bg-[url(./assets/pokeball_bg.png)] bg-contain bg-no-repeat bg-center">
         <img
           className="mx-auto"
           src={selectedPokemonData.pokemonData.sprites.front_default}
