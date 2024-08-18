@@ -18,7 +18,7 @@ export default function SearchBar() {
   } = useContext(PokemonContext);
 
   return (
-    <section className="md:w-1/3 bg-green-900 rounded-xl p-3 flex gap-1">
+    <section className="w-full md:w-1/3 bg-green-900 md:rounded-xl p-3 flex gap-1">
       <Modal ref={dialog}>
         {dataError && (
           <Error
@@ -45,7 +45,7 @@ export default function SearchBar() {
       />
       <button
         className="
-            w-full bg-green-700 hover:bg-green-500 text-white font-semibold rounded-md p-1 relative disabled:cursor-not-allowed disabled:opacity-80"
+            w-full bg-green-700 enabled:hover:bg-green-500 text-white font-semibold rounded-md p-1 relative disabled:cursor-not-allowed disabled:opacity-80"
         onClick={handleSearch}
         disabled={isFetching ?? false}
         onKeyDown={handleSearch}
