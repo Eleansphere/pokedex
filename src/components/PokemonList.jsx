@@ -8,8 +8,8 @@ export default function Sidebar() {
     useContext(PokemonContext);
 
   return (
-    <section className="w-full md:w-1/3 min-h-min bg-slate-300/50 p-3 rounded-md">
-      <h2 className="text-red-600 text-2xl font-bold">
+    <section className="md:w-1/3 bg-slate-300/50 p-3 rounded-md">
+      <h2 className="text-red-600 text-2xl font-bold mb-2">
         You&apos;ve found:
       </h2>
 

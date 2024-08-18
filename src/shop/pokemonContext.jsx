@@ -144,6 +144,9 @@ export default function PokemonContextProvider({ children }){
       }
     }
 
+    let noPokemonSelected = pokemonList.selectedPokemonId === undefined;
+
+
 // modal closing
 
     function handleClose() {
@@ -212,6 +215,7 @@ useEffect(() => {
         dialog,
         inputValue,
         currentIndex,
+        noPokemonSelected,
     }
 
 
