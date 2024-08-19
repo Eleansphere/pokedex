@@ -15,7 +15,7 @@ export default function Pokemon() {
   } = useContext(PokemonContext);
   log('</Pokemon > rendered');
   let cssBtn =
-    'rounded-md w-1/3 p-2 text-white bg-green-700 enabled:hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-80';
+    'rounded-md w-1/3 p-2 text-white bg-green-700 enabled:hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-80 disabled:invisible';
 
   let openPokeball = ' bg-[url(./assets/pokeball_bg.png)]';
   let cssImageContainer =
@@ -25,7 +25,7 @@ export default function Pokemon() {
       <h1 className="font-pokemonSolid tracking-widest text-center text-6xl text-yellow-400 drop-shadow-[0_8px_2px_rgba(50,0,150,0.50)] mb-2">
         Pokedex
       </h1>
-      <div className="grid grid-rows-4 grid-cols-4 bg-green-900  p-3 md:rounded-xl md:w-1/3">
+      <div className="grid grid-rows-4 grid-cols-4 bg-green-900 shadow-md  p-3 md:rounded-xl md:w-1/3">
         <h2 className="col-span-4 self-center  text-yellow-400 text-center capitalize text-2xl font-pokemonSolid tracking-widest">
           {(noPokemonSelected && 'No Pokemon in sight.') ||
             selectedPokemonData.name}
@@ -37,7 +37,9 @@ export default function Pokemon() {
           }
         >
           <img
-            className={(noPokemonSelected && 'w-3/5 md:w-2/5') || 'w-30'}
+            className={
+              (noPokemonSelected && 'w-3/5 md:w-2/5') || 'w-30'
+            }
             src={
               (noPokemonSelected && noPokemon) ||
               selectedPokemonData.pokemonData.sprites.front_default
@@ -89,7 +91,11 @@ export default function Pokemon() {
         </div>
 
         <div className="col-span-4 flex items-end gap-2">
-          <button className={cssBtn} disabled={noPokemonSelected ?? false} onClick={handlePrevPokemon}>
+          <button
+            className={cssBtn}
+            disabled={noPokemonSelected ?? false}
+            onClick={handlePrevPokemon}
+          >
             Previous
           </button>
           <button
@@ -101,9 +107,11 @@ export default function Pokemon() {
           >
             Delete
           </button>
-          <button className={cssBtn}
-          disabled={noPokemonSelected ?? false}
-          onClick={handleNextPokemon}>
+          <button
+            className={cssBtn}
+            disabled={noPokemonSelected ?? false}
+            onClick={handleNextPokemon}
+          >
             Next
           </button>
         </div>

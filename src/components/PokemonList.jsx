@@ -8,9 +8,9 @@ export default function Sidebar() {
     useContext(PokemonContext);
 
   return (
-    <section className="w-full min-h-fit md:w-1/3 bg-slate-300/50 p-3 md:rounded-md">
+    <section className="w-full min-h-fit md:w-1/3  bg-slate-300/60 p-3 md:rounded-md">
       <h2 className="text-red-600 text-2xl font-bold mb-2">
-        You&apos;ve found:
+        You&apos;ve found: {pokemonList.pokemons.length}
       </h2>
 
       <ul className="grid grid-cols-3 grid-rows-3 gap-4">
