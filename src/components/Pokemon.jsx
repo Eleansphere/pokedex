@@ -1,6 +1,6 @@
 import { PokemonContext } from '../shop/pokemonContext.jsx';
 import { useContext } from 'react';
-import noPokemon from '../assets/pokeball.png';
+import noPokemon from '../assets/pokeball.webp';
 import { log } from '../log.js';
 
 export default function Pokemon() {
@@ -17,7 +17,7 @@ export default function Pokemon() {
   let cssBtn =
     'rounded-md w-1/3 p-2 text-white bg-green-700 enabled:hover:bg-green-400 disabled:cursor-not-allowed disabled:opacity-80 disabled:invisible';
 
-  let openPokeball = ' bg-[url(./assets/pokeball_bg.png)]';
+  let openPokeball = ' bg-[url(./assets/pokeball_bg.webp)]';
   let cssImageContainer =
     'flex items-center justify-center col-span-2 row-span-2 bg-contain bg-no-repeat bg-center';
   return (

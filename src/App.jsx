@@ -10,7 +10,7 @@ function App() {
 
   return (
     <PokemonContextProvider>
-      <main className="flex flex-col gap-2 items-center justify-center max-w-full min-h-dvh bg-[url(./assets/grassland_bg.jpg)] bg-bottom bg-clip-border bg-no-repeat">
+      <main className="flex flex-col gap-2 items-center justify-center max-w-full min-h-dvh bg-[url(./assets/grassland_bg.webp)] bg-bottom bg-clip-border bg-no-repeat">
         <Pokemon />
         <SearchBar />
         <PokemonList />
